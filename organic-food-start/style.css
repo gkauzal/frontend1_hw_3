@@ -1,0 +1,246 @@
+/* https://developer.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/ */
+.offscreen {
+  clip-path: inset(100%);
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* font is loaded locally. You can use these fonts in the template */
+@font-face {
+  font-family: Oswald;
+  src: url("./fonts/Oswald/Oswald-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url("./fonts/Oswald/Oswald-ExtraLight.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url("./fonts/Oswald/Oswald-Light.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url("./fonts/Oswald/Oswald-Bold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("./fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("./fonts/Lato/Lato-Light.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("./fonts/Lato/Lato-Bold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+body {
+  font-weight: 300;
+  font-family: "Oswald", sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: lightgrey;
+}
+
+/* start grid-banner section */
+
+.grid-banner {
+  display: grid;
+  grid-template-rows: [first-row] 1fr [second-row] 29fr;
+  height: 55vw;
+}
+
+.banner-image {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  filter: brightness(50%);
+}
+
+.menubar {
+  display: grid;
+  grid-template-columns: [menubar-cl1]1fr [menubar-cl2]1fr;
+  grid-template-rows: [menubar-row1]10vw [menubar-row2]10vw;
+  color: white;
+}
+
+.nav-opening {
+  grid-column-start: menubar-cl1;
+  grid-column-end: menubar-cl2;
+  text-align: left;
+  border-bottom: 3px solid rgb(145, 145, 145, 0.5);
+  padding-left: 5vw;
+  font-size: 2vw;
+}
+
+.nav-item {
+  display: inline-block;
+  padding-right: 0.3vw;
+}
+
+.nav-myaccount {
+  text-align: end;
+  border-bottom: 3px solid rgb(145, 145, 145, 0.5);
+  padding-right: 5vw;
+  font-size: 2vw;
+}
+
+.nav-logo {
+  grid-column-start: menubar-cl1;
+  grid-row-start: menubar-row2;
+  padding-left: 5vw;
+}
+
+.nav-logo > img {
+  max-width: 20vw;
+}
+
+.nav-menu {
+  grid-column-start: menubar-cl2;
+  text-align: end;
+  padding-right: 3vw;
+}
+
+#menu-btn {
+  display: none;
+}
+
+ul > li {
+  padding-left: 1vw;
+}
+
+li > a {
+  text-decoration: none;
+  color: white;
+  font-size: 2vw;
+}
+
+.nav-list-items {
+  display: inline;
+}
+
+.logo > img {
+  max-width: 15vw;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  color: white;
+}
+
+.logo > h2 {
+  font-size: 4vw;
+}
+
+.logo > a {
+  text-decoration: none;
+  background-color: rgb(76, 241, 76);
+  color: white;
+  padding: 1vw;
+  width: 18vw;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 90px;
+  font-size: 2vw;
+}
+
+/* end grid-banner section */
+
+/* start main page section */
+.main {
+  display: grid;
+  grid-template-rows: [first-main-row]3fr [second-main-row] 5fr [third-main-row]4fr;
+  background-color: rgb(211, 211, 211);
+  height: 45vw;
+}
+
+.main-text {
+  text-align: center;
+  padding-top: 5vw;
+  padding-right: 30vw;
+  padding-left: 30vw;
+}
+
+.large-font {
+  font-size: 3vw;
+}
+
+.normal-font {
+  font-size: 2vw;
+}
+
+.main-cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  padding: 3vw;
+  padding-right: 15vw;
+  padding-left: 15vw;
+}
+
+.cards {
+  grid-template-rows: auto auto auto;
+  color: rgb(0, 128, 65);
+  background-color: rgb(232, 232, 232);
+  height: 20vw;
+  width: 10vw;
+  box-shadow: 0 0 27px 18px rgba(0, 0, 0, 0.15);
+  padding: 2vw;
+  text-align: center;
+}
+
+.cards > img {
+  width: 6vw;
+}
+
+.cards > .large-font {
+  font-size: 2vw;
+}
+
+.cards > .small-font {
+  font-size: 0.8vw;
+}
+
+.main-image {
+  background-image: url("img/banner_image_2.jpg");
+  height: 30vw;
+  background-size: cover;
+}
+
+/* end main page section */
+
+/* start footer section */
+
+.footer {
+  height: 15vw;
+  text-align: center;
+  font-size: 2vw;
+}
+
+/* end footer section */

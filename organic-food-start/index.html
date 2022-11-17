@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./fonts/font-awesome/css/fontawesome-all.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+
+  <title>Organic food</title>
+</head>
+
+<body>
+  <div class="grid-banner">
+    <img class="banner-image" src="img/banner_image_1.jpg" alt="banner-image">
+    <div class="menubar">
+      <div class="nav-opening">
+        <p class="nav-item">Opening hours</p><i class="fas fa-clock nav-item"></i>
+        <p class="nav-item"> 7:00AM - 11:10PM</p>
+      </div>
+      <div class="nav-myaccount">
+        <p class="myaccount nav-item">My Account</p><i class="fas fa-user nav-item"></i>
+      </div>
+      <div class="nav-logo">
+        <img src="img/organic_logo.png" alt="organic-logo">
+      </div>
+      <div class="nav-menu">
+        <ul>
+          <li id="menu-btn" onclick="OpenMenu()"><a href="#">Menu</a></li>
+          <li class="nav-list-items"><a href="#">Home</a></li>
+          <li class="nav-list-items"><a href="#">About Us</a></li>
+          <li class="nav-list-items"><a href="#">Shop</a></li>
+          <li class="nav-list-items"><a href="#">Our Team</a></li>
+          <li class="nav-list-items"><a href="#">Blog</a></li>
+          <li class="nav-list-items"><a href="#">Contact Us</a></li>
+          <li class="nav-list-items"><a href="#"><i class="fas fa-search"></i></a></li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="banner-logo">
+      <div class="logo">
+        <img src="img/banner_logo.png" alt="banner-logo">
+        <h2>Drink The life like juice</h2>
+        <a href="#">SHOP NOW</a>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="main-text">
+      <p class="large-font">Welcome To Super Organic Foods</p>
+      <p class="normal-font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae optio ducimus pariatur.
+        Dignissimos libero
+        porro nulla esse soluta exercitationem dolore commodi animi nesciunt. Suscipit molestiae sunt magni explicabo
+        at?</p>
+    </div>
+    <div class="main-cards">
+      <div class="cards" id="first-card">
+        <img src="icons/basic_world.svg" alt="basic-world-image">
+        <p class="large-font">100% Natural</p>
+        <p class="small-font">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores obcaecati repellat eum
+          nihil laboriosam nam
+          laudantium commodi aspernatur voluptatem numquam!</p>
+      </div>
+      <div class="cards" id="second-card">
+        <img src="icons/basic_elaboration_briefcase_refresh.svg" alt="basic-world-image">
+        <p class="large-font">100% Natural</p>
+        <p class="small-font">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores obcaecati repellat eum
+          nihil laboriosam nam
+          laudantium commodi aspernatur voluptatem numquam!</p>
+      </div>
+      <div class="cards" id="third-card">
+        <img src="icons/basic_todolist_pen.svg" alt="basic-world-image">
+        <p class="large-font">100% Natural</p>
+        <p class="small-font">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores obcaecati repellat eum
+          nihil laboriosam nam
+          laudantium commodi aspernatur voluptatem numquam!</p>
+      </div>
+    </div>
+    <div class=" main-image">
+    </div>
+    <div class="footer">
+      <p>Copyright 2018</p>
+    </div>
+  </div>
+  <script>
+    var x = window.matchMedia("(max-width: 500px)")
+    RespFunction(x)
+    x.addListener(RespFunction)
+  </script>
+</body>
+
+</html>
